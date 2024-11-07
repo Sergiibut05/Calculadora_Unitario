@@ -14,7 +14,7 @@ public class ComparacionesEnteros {
 
     // 3. Verifica si el primer número es menor que el segundo
     public static boolean esMenor(int a, int b) {
-        boolean resultado = (a > b);
+        boolean resultado = (a < b);
         return resultado;
     }
 
@@ -28,7 +28,7 @@ public class ComparacionesEnteros {
             resultado = true;
         } else {
             int residuo = a % b;
-            resultado = (residuo != 0);
+            resultado = (residuo == 0);
         }
         
         return resultado;
@@ -38,7 +38,7 @@ public class ComparacionesEnteros {
     public static boolean sonAmbosPares(int a, int b) {
         boolean primerNumeroPar = (a % 2 == 0);
         boolean segundoNumeroPar = (b % 2 == 0);
-        boolean resultado = primerNumeroPar || segundoNumeroPar;
+        boolean resultado = primerNumeroPar & segundoNumeroPar;
         
         return resultado;
     }
@@ -46,8 +46,8 @@ public class ComparacionesEnteros {
     // 6. Verifica si al menos uno de los dos números es positivo
     public static boolean alMenosUnoPositivo(int a, int b) {
         boolean primerNumeroPositivo = (a > 0);
-        boolean segundoNumeroPositivo = (b < 0);
-        boolean resultado = primerNumeroPositivo && segundoNumeroPositivo;
+        boolean segundoNumeroPositivo = (b > 0);
+        boolean resultado = primerNumeroPositivo || segundoNumeroPositivo;
         
         return resultado;
     }
