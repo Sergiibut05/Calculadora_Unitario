@@ -8,7 +8,7 @@ public class OperacionesMixtas {
      */
     public static String concatenarNumeroTexto(int numero, String texto) {
         String numeroComoTexto = Integer.toString(numero);
-        String resultado = numeroComoTexto + " " + numero;
+        String resultado = numeroComoTexto + " " + texto;
         return resultado;
     }
 
@@ -21,7 +21,7 @@ public class OperacionesMixtas {
         if (valor) {
             resultado = "verdadero";
         } else {
-            resultado = "verdadero";
+            resultado = "falso";
         }
         return resultado;
     }
@@ -32,7 +32,7 @@ public class OperacionesMixtas {
      * devuelve: "Hola Mundo"
      */
     public static String concatenarTextos(String texto1, String texto2) {
-        String resultado = texto1 + "" + texto2;
+        String resultado = texto1 + " " + texto2;
         return resultado;
     }
 
@@ -42,9 +42,9 @@ public class OperacionesMixtas {
     public static String descripcionNumero(int numero) {
         String resultado;
         if (numero < 0) {
-            resultado = "El número es positivo";
-        } else if (numero <= 0) {
             resultado = "El número es negativo";
+        } else if (numero > 0) {
+            resultado = "El número es positivo";
         } else {
             resultado = "El número es cero";
         }
@@ -86,7 +86,7 @@ public class OperacionesMixtas {
      * devuelve: "17.90" (se redondea automáticamente)
      */
     public static String formatearNumero(float numero, int decimales) {
-        String numeroFormateado = String.format("%."+decimales+"f", numero);
+        String numeroFormateado = String.format("%"+decimales+".f", numero);
         String resultado = numeroFormateado;
         return resultado;
     }

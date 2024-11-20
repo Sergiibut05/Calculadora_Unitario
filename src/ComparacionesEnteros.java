@@ -25,7 +25,7 @@ public class ComparacionesEnteros {
         boolean resultado;
         
         if (divisorEsCero) {
-            resultado = true;
+            resultado = false;
         } else {
             int residuo = a % b;
             resultado = (residuo == 0);
@@ -54,8 +54,8 @@ public class ComparacionesEnteros {
 
     // 7. Verifica si la suma de los dos números es par
     public static boolean sumaEsPar(int a, int b) {
-        int suma = ++a + b;
-        boolean sumaPar = (++suma % 2 == 0);
+        int suma = a + b;
+        boolean sumaPar = (suma % 2 == 0);
         return sumaPar;
     }
 
