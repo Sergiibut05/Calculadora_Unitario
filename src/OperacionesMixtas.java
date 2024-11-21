@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class OperacionesMixtas {
 
     /*
@@ -86,7 +88,7 @@ public class OperacionesMixtas {
      * devuelve: "17.90" (se redondea automáticamente)
      */
     public static String formatearNumero(float numero, int decimales) {
-        String numeroFormateado = String.format("%"+decimales+".f", numero);
+        String numeroFormateado = String.format("%."+decimales+"f", numero);
         String resultado = numeroFormateado;
         return resultado;
     }

@@ -95,12 +95,12 @@ public class OperacionesMixtasTest {
 
     @Test
     public void testFormatearNumero() {
-        float descripcion = 17.89945f;
-        int numero=2;
+        float numero = 17.89945f;
+        int decimales=2;
         //Arange or given
-        String expectedResult = "El número es positivo";
+        String expectedResult = "17,90";
             // Act or when
-        String actualResult = OperacionesMixtas.formatearNumero(descripcion, numero);
+        String actualResult = OperacionesMixtas.formatearNumero(numero,decimales);
             //Assert or then
         Assert.assertEquals(expectedResult, actualResult);
     }
